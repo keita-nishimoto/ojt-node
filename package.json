@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Repository used for JavaScript OJT.",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:all": "mocha src/tests/**/*.test.js",
+    "lint": "eslint src/**/*.js",
+    "lint:fix": "eslint --fix src/**/*.js"
   },
   "repository": {
     "type": "git",
