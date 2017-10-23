@@ -4,7 +4,7 @@
   "description": "Repository used for JavaScript OJT.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,18 @@
     "url": "https://github.com/keita-nishimoto/ojt-node/issues"
   },
   "homepage": "https://github.com/keita-nishimoto/ojt-node#readme",
-  "private": true
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@types/mocha": "^2.2.43",
+    "@types/node": "^8.0.46",
+    "@types/power-assert": "^1.4.29",
+    "eslint": "^4.9.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0",
+    "mocha": "^4.0.1",
+    "power-assert": "^1.4.4"
+  }
 }
