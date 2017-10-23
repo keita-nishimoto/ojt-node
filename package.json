@@ -2,7 +2,6 @@
   "name": "ojt-node",
   "version": "1.0.0",
   "description": "Repository used for JavaScript OJT.",
-  "main": "index.js",
   "scripts": {
     "test": "mocha"
   },
