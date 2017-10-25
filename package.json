@@ -5,6 +5,8 @@
   "scripts": {
     "test": "mocha",
     "test:all": "mocha src/tests/**/*.test.js",
+    "test:coverage": "nyc yarn run test:all",
+    "coverage:report:html": "nyc report --reporter=html",
     "lint": "eslint src/**/*.js",
     "lint:fix": "eslint --fix src/**/*.js"
   },
@@ -30,6 +32,7 @@
     "eslint-plugin-jsx-a11y": "^6.0.2",
     "eslint-plugin-react": "^7.4.0",
     "mocha": "^4.0.1",
+    "nyc": "^11.2.1",
     "power-assert": "^1.4.4"
   }
 }
