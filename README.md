@@ -186,3 +186,28 @@ JavaScript だと一番、簡単なデバッグ方法として `console.log(変�
 
 Debuggerを使いこなすには少しだけ訓練が必要ですが、十分にリターンを得られるだけの開発効率が身につけられるので、効率が悪いなと感じたら、是非ともチャレンジしてみて下さい。
 
+### lint lint:fix
+
+[JavaScriptの基礎](https://github.com/keita-nishimoto/web-developer-ojt/blob/master/server-side-programming/JavaScript/README.md) のところで、コーディングスタイルは [Airbnb JavaScript Style Guide](https://github.com/airbnb/javascript) がオススメだという話を書きました。
+
+この `lint` コマンドは書かれているコードが特定のコーディングルールに沿って書かれているかをチェックする為のコマンドです。
+
+`yarn run lint` と実行して見ましょう。
+
+もし問題がある箇所があると、errorや警告が表示されるのでメッセージを確認後、修正しましょう。
+
+`yarn run lint:fix` と実行すると規約に違反したコードをある程度自動で修正してくれます。
+
+ただし、コードの動きを破壊するような変更は出来ないので、万能ではありません。
+
+とは言え全て手動で直すのも大変なので、`yarn run lint:fix` はGitにコミットする前には実行しておくと良いでしょう。
+
+※ このコマンドの裏側で使われているのは [ESLint](https://eslint.org/) と呼ばれているJavaScriptでオススメのコード整形ツールです。
+
+## 最後に
+
+説明は以上になります。
+
+本プロジェクトをベースに下記の課題を頑張ってみて下さい。
+
+- [web-developer-ojt/server-side-programming/JavaScript/task.md](https://github.com/keita-nishimoto/web-developer-ojt/blob/master/server-side-programming/JavaScript/task.md)
