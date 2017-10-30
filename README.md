@@ -204,6 +204,28 @@ Debuggerを使いこなすには少しだけ訓練が必要ですが、十分に
 
 ※ このコマンドの裏側で使われているのは [ESLint](https://eslint.org/) と呼ばれているJavaScriptでオススメのコード整形ツールです。
 
+## Webサーバの起動方法
+
+本プロジェクトの直下に移動して `node app.js` を実行してみて下さい。
+
+コンソール上に `server start at http://localhost:3000` と表示されたかと思います。
+
+もしも [ojt-linux-vagrant](https://github.com/keita-nishimoto/ojt-linux-vagrant) を利用して起動しているのであれば、 `http://192.168.33.100:3000` を Mac上で直接起動している場合は `http://localhost:3000` をブラウザで開いてみて下さい。
+
+下記のような画面が表示されたかと思います。
+
+![jsojttop](https://user-images.githubusercontent.com/11032365/32175765-3b75080e-bdc9-11e7-8643-eb5fcbc74341.png)
+
+`app.js` というファイル内でアクセスパスが '/' だった場合に `index.html` を表示させています。
+
+さらに `index.html` の中で `public/js/clock.js` を読み込んでいるので時計が動いているかと思います。
+
+この場合、`app.js` がサーバサイドのプログラムで `public/js/clock.js` がクライアントサイドのプログラムになります。
+
+これがもっとも基本的な Node.jsを利用したWebサーバです。
+
+これをベースに色々なページを追加して見ましょう。
+
 ## 最後に
 
 説明は以上になります。
