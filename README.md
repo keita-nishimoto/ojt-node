@@ -157,7 +157,7 @@ Debuggerを起動させつつ、テストを実行する為のコマンドです
 
 今回デバッグ対象にしたいのは `ojt-node/src/algorithm/search.js` なのでファイルの先頭にでも追記します。
 
-```javascript 1.8
+```
 // ojt-node/src/algorithm/search.js の先頭に以下を追加
 debugger;
 ```
@@ -166,7 +166,17 @@ debugger;
 
 Google Chromeのアドレスバーに `chrome://inspect` と入力して下さい。
 
-そうすると、下記のような画面が開くので、`inspect` のリンクを開くとデバッグがDebuggerが起動します。
+そうすると、下記のような画面が開くので、`Configure...` から [ojt-linux-vagrant](https://github.com/keita-nishimoto/ojt-linux-vagrant) の情報を入力します。
+
+"192.168.33.100:9229" を入力して `Done` を押して下さい。
+
+※ この設定はvagrantで構築したゲストOSと皆さんが利用しているホストマシン（Mac）を通信させる為に必要な設定です。
+
+![remote-debug](https://user-images.githubusercontent.com/11032365/33077327-e3728c98-cf12-11e7-9a25-6505ee6ae453.png)
+
+`inspect` のリンクを開くとデバッグがDebuggerが起動します。
+
+※もし `inspect` のリンクが表示されない場合はページをリロードしてみて下さい。
 
 ![node-debug1](https://user-images.githubusercontent.com/11032365/32061970-191c870a-baae-11e7-892e-7e6c54a14309.png)
 
@@ -177,10 +187,6 @@ Google Chromeのアドレスバーに `chrome://inspect` と入力して下さ�
 実行が終わると `Waiting for the debugger to disconnect...` というメッセージがコンソール上に表示されるので、Debuggerを閉じましょう。
 
 ※ 閉じないとテストが終了しないです。
-
-ちなみに、この手順に関してのみ Mac上でNode.jsが実行出来る環境になっている前提です。（本カリキュラムで用意した [ojt-linux-vagrant](https://github.com/keita-nishimoto/ojt-linux-vagrant) を利用している場合）
-
-vagrant上のプログラムをローカルのChromeDebuggerでデバックする方法はあるので、[こちらの記事](http://keruuweb.com/node-js-vagrant%E4%B8%8A%E3%81%AEnode-js%E3%82%92chrome%E3%81%A7%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E3%81%99%E3%82%8B/) 等を参考に挑戦してみるといいでしょう。
 
 JavaScript だと一番、簡単なデバッグ方法として `console.log(変数名);` みたいに console APIを使ってデバッグをする方法もありますが、これは問題のある箇所がある程度特定出来ている時には有効ですが、どこで問題が起きているか分からない場合は効率が悪い事も多いです。
 
