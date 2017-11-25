@@ -5,7 +5,6 @@ const search = require('../../algorithm/search.js');
  * 検索系のアルゴリズムのテストコード
  */
 describe('SearchTest', () => {
-
   /**
    * 正常系テストケース
    * リニアサーチ（線形探索）の検索結果が意図した通りである事
@@ -40,11 +39,11 @@ describe('SearchTest', () => {
         assert.strictEqual(
           error.message,
           'NotFound',
-          '意図したエラーメッセージが表示される事を期待'
+          '意図したエラーメッセージが表示される事を期待',
         );
 
         return true;
-      }
+      },
     );
   });
 });
