@@ -8,8 +8,8 @@
     "test:coverage": "nyc yarn run test:all",
     "test:debug": "mocha --inspect=192.168.33.100:9229 --inspect-brk",
     "coverage:report:html": "nyc report --reporter=html",
-    "lint": "eslint src/**/*.js public/js/*.js",
-    "lint:fix": "eslint --fix src/**/*.js public/js/*.js"
+    "lint": "eslint 'src/**/*.js' 'public/js/*.js'",
+    "lint:fix": "eslint --fix 'src/**/*.js' 'public/js/*.js'"
   },
   "repository": {
     "type": "git",
