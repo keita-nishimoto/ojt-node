@@ -4,6 +4,7 @@
     "window": true,
     "document": true,
     "describe": true,
-    "it": true
+    "it": true,
+    "fetch": true
   }
 }
